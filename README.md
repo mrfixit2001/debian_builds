@@ -1,2 +1,1 @@
-# debian_builds
-Vanilla 2-partition debian builds with no customizations or extra packages
+This repo contains 2-partition debian builds which have no customizations or extra packages added. They are vanilla debian with a core set of default packages. These builds include my custom kernel which has been optimized for usage for retro-gaming and 4k high definition media playback.
