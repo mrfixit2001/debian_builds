@@ -10,7 +10,15 @@ There are three custom parts of this build:
 - Rockchip MALI userspace drivers are installed manually - meaning there's no debian package for this installation. The reason here is that often other packages (such as MESA) overwrite the libraries included by the mali driver. So if at some point this happens, simply run /usr/lib/arm-linux-gnueabihf/install_mali.sh and it will re-create all the symlinks for the mali driver to begin working again.
 - MrFixIt's custom bootup service which provides two features: 
     1) enables this build to boot from sd, emmc, and (if you have SPI flashed) usb
-    2) generates a 3rd partition that fills up the rest of the available space on the disk and is mounted to /home
+    2) *by default* generates a 3rd partition that fills up the rest of the available space on the disk and is mounted to /home
+
+* CHANGING THE DEFAULT AND USING ONLY 2 PARTITIONS *
+You have the option to change the default and tell the script to only use two partitions, expanding the main system partition to the full capacity of the disk. 
+WARNING: changing this option will delete anything you have previously saved to the /home folder so back up your data before making this change!
+To change this default simply type this:
+  sudo touch /usr/bin/2parts.touch
+and then reboot. This creates a new empty file that tells the script to use the alternative setting. Do not remove this empty file.
+
 
 Default usernames and passwords:
 - User: root    Pass: root
