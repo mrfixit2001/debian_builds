@@ -3,7 +3,7 @@ This repo contains debian builds with 2 partitions, one for the rockchip boot an
 Included in this build are the following debian packages: 
 firmware-realtek fake-hwclock libcec-dev libp8-platform-dev cmake autotools-dev parted rsync dosfstools curl xz-utils iw rfkill wpasupplicant openssh-server alsa-utils nano git build-essential vim jq ethtool wget ca-certificates software-properties-common sudo htop eatmydata systemd systemd-sysv udev apt kmod locales sudo netbase net-tools ethtool iproute iputils-ping ifupdown dhcpcd5 firmware-brcm80211 wpasupplicant ssh avahi-daemon ntp wireless-tools apt-transport-https
 
-The GBM (non-X11 and non-Wayland) MALI library and headers are also installed in this build, but they are not a debian package (read below). If you want to use X11 or Wayland, just download the correct mali library file from the rockchip libmali repo and copy the library over as this file: /usr/lib/arm-linux-gnueabihf/libmali.so
+The GBM + X11 MALI library and headers are also installed in this build, but they are not a debian package (read below). If you want to use Wayland, just download the correct mali library file from the rockchip libmali repo and copy the library over as this file: /usr/lib/arm-linux-gnueabihf/libmali.so
 
 There are three custom parts of this build:
 - MrFixIt's custom kernel which has been optimized for usage for retro-gaming and 4k high definition media playback
