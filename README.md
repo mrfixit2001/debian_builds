@@ -6,7 +6,7 @@ firmware-realtek fake-hwclock libcec-dev libp8-platform-dev cmake autotools-dev 
 The GBM + X11 MALI library and headers are also installed in this build, but they are not a debian package (read below). If you want to use Wayland, just download the correct mali library file from the rockchip libmali repo and copy the library over as this file: /usr/lib/arm-linux-gnueabihf/libmali.so
 
 There are three custom parts of this build:
-- MrFixIt's custom kernel which has been optimized for usage for retro-gaming and 4k high definition media playback. It also allows for the use of Wifi, Bluetooth, and PCIe all at the same time.
+- MrFixIt's custom kernel (https://github.com/mrfixit2001/rockchip-kernel) which has been optimized for usage for retro-gaming and 4k high definition media playback. For the RockPro64, it also allows for the use of Wifi, Bluetooth, and PCIe all at the same time.
 - Rockchip MALI userspace drivers are installed manually - meaning there's no debian package for this installation. The reason here is that often other packages (such as MESA) overwrite the libraries included by the mali driver. So if at some point this happens, simply run /usr/lib/arm-linux-gnueabihf/install_mali.sh and it will re-create all the symlinks for the mali driver to begin working again.
 - MrFixIt's custom bootup service which provides two features: 
     1) enables this build to boot from sd, emmc, and (if you have SPI flashed) usb
